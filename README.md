@@ -7,7 +7,7 @@
 - [x] Add `window.AddCampaigns` method
 - [ ] Filter by date
 
-### [Click here to see the Video Walkthrough](https://www.loom.com/share/ad65039765214484a06d4178760f3564)
+### [Click here to see the Video Walkthrough](https://www.loom.com/share/db667478a86c4d3387d096aa9bdb90be)
 
 ## Proposed Solution
 

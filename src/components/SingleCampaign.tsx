@@ -9,7 +9,6 @@ const SingleCampaign = ({ campaign }: SingleCampaignProps) => {
   const todaysDate = new Date(new Date().setHours(0, 0, 0, 0)); // get todays date at midnight
   return (
     <TableRow
-      key={campaign.id}
       sx={
         todaysDate <= new Date(campaign.endDate)
           ? { backgroundColor: "#b7e1cd" }

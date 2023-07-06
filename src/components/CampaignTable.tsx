@@ -18,7 +18,7 @@ interface CampaignTableProps {
 
 const CampaignTable = ({ campaigns }: CampaignTableProps) => {
   return (
-    <Paper elevation={1} variant="outlined">
+    <Paper variant="outlined">
       <Toolbar sx={{ justifyContent: "center" }}>
         <Typography>
           Use the <i>window.AddCampaigns</i> method to add more campaigns
@@ -48,7 +48,9 @@ const CampaignTable = ({ campaigns }: CampaignTableProps) => {
           </TableHead>
           <TableBody>
             {campaigns &&
-              campaigns.map((row) => <SingleCampaign campaign={row} />)}
+              campaigns.map((row) => (
+                <SingleCampaign key={row.id} campaign={row} />
+              ))}
           </TableBody>
         </MainTable>
       </div>

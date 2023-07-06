@@ -2,12 +2,17 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import CampaignTable from "./components/CampaignTable";
-import { testCampaigns } from "./campaignUtils";
 import { Campaign } from "./types";
 
+// Global interface for window.AddCampaigns
+declare global {
+  interface Window {
+    AddCampaigns: (items: Campaign[]) => void;
+  }
+}
+
 function App() {
-  const [currentCampaigns, setCurrentCampaigns] =
-    useState<Campaign[]>(testCampaigns);
+  const [currentCampaigns, setCurrentCampaigns] = useState<Campaign[]>([]);
 
   // Search logic - default of no search text and the filtered results being all of the campaigns
   const [searchText, setSearchText] = useState<string>("");
@@ -21,10 +26,19 @@ function App() {
     setSearchResults(results);
   }
 
+  // AddCampaigns logic
+  window.AddCampaigns = (newCampaigns: Campaign[]) => {
+    // append current campaigns with new campaigns
+    setCurrentCampaigns((currentCampaigns) => [
+      ...currentCampaigns,
+      ...newCampaigns,
+    ]);
+  };
+
   useEffect(() => {
     filterResults(currentCampaigns);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchText]);
+  }, [searchText, currentCampaigns]);
 
   return (
     <div className="App">

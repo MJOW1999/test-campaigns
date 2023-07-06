@@ -4,10 +4,10 @@
 
 - [x] Design page
 - [x] Search by name
-- [ ] Add `window.AddCampaigns` method
+- [x] Add `window.AddCampaigns` method
 - [ ] Filter by date
 
-### [Click here to see the Video Walkthrough]([LINK_TO_LOOM_VIDEO])
+### [Click here to see the Video Walkthrough](https://www.loom.com/share/ad65039765214484a06d4178760f3564)
 
 ## Proposed Solution
 
@@ -18,10 +18,15 @@
 - Create `window.AddCampaigns` method
 - Filter by date
 - Unit Test
+- Deploy to Netlify
 
-### [Click here to see the Live Version]([LINK_TO_THE_DEPLOYED_APP])
+### [Click here to see the Live Version](https://test-campaigns.netlify.app/)
 
 ## Screenshots
+
+![Initial Table](./public/images/Initial%20Table.png)
+
+![Table Active and Inactive Enabled](./public/images/Table%20Active%3AInactive.png)
 
 ## Libraries / Tools Used
 
@@ -48,4 +53,6 @@ You can run the unit tests using:
 
 ## Future Work
 
-1.
+1. Add Filter by Date feature
+2. Add more testing
+3. Verification on `window.AddCampaigns` user input

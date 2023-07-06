@@ -3,8 +3,8 @@
 ## Todo
 
 - [x] Design page
+- [x] Search by name
 - [ ] Add `window.AddCampaigns` method
-- [ ] Search by name
 - [ ] Filter by date
 
 ### [Click here to see the Video Walkthrough]([LINK_TO_LOOM_VIDEO])
@@ -14,8 +14,8 @@
 - Use `Create React App` to set up quickly
 - Design page and map out basic components
 - Test using test data
-- Create `window.AddCampaigns` method
 - Search by name feature
+- Create `window.AddCampaigns` method
 - Filter by date
 - Unit Test
 

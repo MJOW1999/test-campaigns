@@ -9,7 +9,12 @@ import {
 } from "@mui/material";
 import { Search as SearchIcon } from "@mui/icons-material";
 
-const Header = () => {
+interface SearchProps {
+  searchText: string;
+  setSearchText: (searchText: string) => void;
+}
+
+const Header = ({ searchText, setSearchText }: SearchProps) => {
   return (
     <Paper elevation={4}>
       <AppBar position="relative">
@@ -33,6 +38,7 @@ const Header = () => {
             <StyledInputBase
               placeholder="Search…"
               inputProps={{ "aria-label": "search" }}
+              onChange={(e) => setSearchText(e.target.value)}
             />
           </Search>
         </Toolbar>

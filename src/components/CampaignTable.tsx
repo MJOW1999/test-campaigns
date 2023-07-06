@@ -6,6 +6,8 @@ import {
   TableHead,
   TableRow,
   TableCell,
+  TableBody,
+  Typography,
 } from "@mui/material";
 import SingleCampaign from "./SingleCampaign";
 import { Campaign } from "../types";
@@ -17,7 +19,11 @@ interface CampaignTableProps {
 const CampaignTable = ({ campaigns }: CampaignTableProps) => {
   return (
     <Paper elevation={1} variant="outlined">
-      <Toolbar></Toolbar>
+      <Toolbar sx={{ justifyContent: "center" }}>
+        <Typography>
+          Use the <i>window.AddCampaigns</i> method to add more campaigns
+        </Typography>
+      </Toolbar>
       <Divider />
       <div>
         <MainTable>
@@ -40,8 +46,10 @@ const CampaignTable = ({ campaigns }: CampaignTableProps) => {
               </TableCell>
             </TableRow>
           </TableHead>
-          {campaigns &&
-            campaigns.map((row) => <SingleCampaign campaign={row} />)}
+          <TableBody>
+            {campaigns &&
+              campaigns.map((row) => <SingleCampaign campaign={row} />)}
+          </TableBody>
         </MainTable>
       </div>
     </Paper>

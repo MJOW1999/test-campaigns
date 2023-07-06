@@ -2,7 +2,7 @@
 
 ## Todo
 
-- [ ] Design page
+- [x] Design page
 - [ ] Add `window.AddCampaigns` method
 - [ ] Search by name
 - [ ] Filter by date
